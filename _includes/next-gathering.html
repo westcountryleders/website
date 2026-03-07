@@ -43,8 +43,9 @@
     const calendarEmail = "westcountryleders@gmail.com";
     const icalUrl = "https://calendar.google.com/calendar/ical/" + encodeURIComponent(calendarEmail) + "/public/basic.ics";
 
-    // Multiple CORS proxies as fallbacks - free proxies can block certain origins
+    // Use our Cloudflare Pages API route first, then fall back to free proxies
     const proxyUrls = [
+      "/api/calendar",
       "https://corsproxy.io/?" + encodeURIComponent(icalUrl),
       "https://api.allorigins.win/raw?url=" + encodeURIComponent(icalUrl),
       "https://corsproxy.org/?" + encodeURIComponent(icalUrl)
