@@ -24,6 +24,9 @@ collections:
     output: true
     permalink: /tournaments/:name/
 
+exclude:
+  - functions
+
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title: "West Country Leders"
 description: "Board Gamers"
