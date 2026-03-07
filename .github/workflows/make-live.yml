@@ -56,11 +56,12 @@ jobs:
             'robots.txt'
             'sitemap.xml'
             'CNAME'
+            '.nojekyll'
           )
           Get-ChildItem -Path ./ -Recurse -Exclude $exclusions | Remove-Item -Recurse
 
           Write-Output "Copying across staging artifacts"
-          Copy-Item -Path $stagingDirectory/* ./ -Recurse
+          Copy-Item -Path $stagingDirectory/. ./ -Recurse -Force -Exclude .git, .github
 
           git remote set-url origin $productionGit
           git remote --verbose
