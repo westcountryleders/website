@@ -42,7 +42,13 @@
   (function() {
     const calendarEmail = "westcountryleders@gmail.com";
     const icalUrl = "https://calendar.google.com/calendar/ical/" + encodeURIComponent(calendarEmail) + "/public/basic.ics";
-    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(icalUrl);
+
+    // Multiple CORS proxies as fallbacks - free proxies can block certain origins
+    const proxyUrls = [
+      "https://corsproxy.io/?" + encodeURIComponent(icalUrl),
+      "https://api.allorigins.win/raw?url=" + encodeURIComponent(icalUrl),
+      "https://corsproxy.org/?" + encodeURIComponent(icalUrl)
+    ];
     
     const titleEl = document.getElementById('event-banner-title');
     const dateEl = document.getElementById('event-banner-date');
@@ -74,48 +80,64 @@
       });
     }
 
-    fetch(proxyUrl)
-      .then(function(res) { 
-        if (!res.ok) throw new Error('Proxy error');
-        return res.text(); 
-      })
-      .then(function(content) {
-        if (!content || !content.includes('BEGIN:VEVENT')) {
-          return;
-        }
+    function processIcal(content) {
+      if (!content || !content.includes('BEGIN:VEVENT')) return false;
 
-        const unfoldedContent = content.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '');
-        const events = [];
-        const chunks = unfoldedContent.split('BEGIN:VEVENT');
-        const now = new Date();
-        now.setHours(0,0,0,0); // Match today's events even if they started earlier
+      var unfoldedContent = content.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '');
+      var events = [];
+      var chunks = unfoldedContent.split('BEGIN:VEVENT');
+      var now = new Date();
+      now.setHours(0,0,0,0);
 
-        for (let i = 1; i < chunks.length; i++) {
-          const chunk = chunks[i];
-          const summary = (chunk.match(/SUMMARY(?:;[^:]*)?:([^\r\n]+)/) || [])[1];
-          const dtstart = (chunk.match(/DTSTART(?:;[^:]*)?:([^\r\n]+)/) || [])[1];
+      for (var i = 1; i < chunks.length; i++) {
+        var chunk = chunks[i];
+        var summary = (chunk.match(/SUMMARY(?:;[^:]*)?:([^\r\n]+)/) || [])[1];
+        var dtstart = (chunk.match(/DTSTART(?:;[^:]*)?:([^\r\n]+)/) || [])[1];
 
-          if (dtstart) {
-            const start = parseIcsDate(dtstart);
-            if (start && start >= now) {
-              events.push({
-                title: (summary || "Event").trim().replace(/\\/g, ''),
-                start: start
-              });
-            }
+        if (dtstart) {
+          var start = parseIcsDate(dtstart);
+          if (start && start >= now) {
+            events.push({
+              title: (summary || "Event").trim().replace(/\\/g, ''),
+              start: start
+            });
           }
         }
+      }
 
-        events.sort(function(a, b) { return a.start - b.start; });
+      events.sort(function(a, b) { return a.start - b.start; });
 
-        if (events.length > 0) {
-          const next = events[0];
-          if (titleEl) titleEl.textContent = next.title;
-          if (dateEl) dateEl.textContent = formatShortDate(next.start);
-        }
-      })
-      .catch(function(err) {
-        console.error("Calendar fetch error:", err);
-      });
+      if (events.length > 0) {
+        var next = events[0];
+        if (titleEl) titleEl.textContent = next.title;
+        if (dateEl) dateEl.textContent = formatShortDate(next.start);
+        return true;
+      }
+      return false;
+    }
+
+    function tryProxy(index) {
+      if (index >= proxyUrls.length) {
+        console.error("Calendar fetch: all proxies failed");
+        return;
+      }
+
+      fetch(proxyUrls[index])
+        .then(function(res) {
+          if (!res.ok) throw new Error('Proxy ' + index + ' returned ' + res.status);
+          return res.text();
+        })
+        .then(function(content) {
+          if (!processIcal(content)) {
+            throw new Error('Proxy ' + index + ' returned invalid iCal data');
+          }
+        })
+        .catch(function(err) {
+          console.warn("Calendar proxy " + index + " failed:", err.message);
+          tryProxy(index + 1);
+        });
+    }
+
+    tryProxy(0);
   })();
 </script>

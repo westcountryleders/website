@@ -54,7 +54,13 @@ layout: default
 
     const calendarEmail = "westcountryleders@gmail.com";
     const icalUrl = "https://calendar.google.com/calendar/ical/" + encodeURIComponent(calendarEmail) + "/public/basic.ics";
-    const proxyUrl = "https://corsproxy.io/?" + encodeURIComponent(icalUrl);
+
+    // Multiple CORS proxies as fallbacks - free proxies can block certain origins
+    const proxyUrls = [
+      "https://corsproxy.io/?" + encodeURIComponent(icalUrl),
+      "https://api.allorigins.win/raw?url=" + encodeURIComponent(icalUrl),
+      "https://corsproxy.org/?" + encodeURIComponent(icalUrl)
+    ];
     
     const container = document.getElementById('dynamic-events-container');
     const loading = document.getElementById('events-loading');
@@ -120,17 +126,12 @@ layout: default
       return { text: 'Event', type: 'default' };
     }
 
-    fetch(proxyUrl)
-      .then(res => {
-        if (!res.ok) throw new Error('Proxy error');
-        return res.text();
-      })
-      .then(content => {
+    function processEvents(content) {
         clearTimeout(safetyTimer);
         
         if (!content || !content.includes('BEGIN:VEVENT')) {
           showFallback();
-          return;
+          return false;
         }
 
         const unfoldedContent = content.replace(/\r\n[ \t]/g, '').replace(/\n[ \t]/g, '');
@@ -216,13 +217,36 @@ layout: default
             
             container.appendChild(wrapper);
           });
+          return true;
         } else {
           showFallback();
+          return false;
         }
-      })
-      .catch(err => {
-        console.error("Events fetch error:", err);
+    }
+
+    function tryProxy(index) {
+      if (index >= proxyUrls.length) {
+        console.error("Events fetch: all proxies failed");
         showFallback();
-      });
+        return;
+      }
+
+      fetch(proxyUrls[index])
+        .then(function(res) {
+          if (!res.ok) throw new Error('Proxy ' + index + ' returned ' + res.status);
+          return res.text();
+        })
+        .then(function(content) {
+          if (!processEvents(content)) {
+            throw new Error('Proxy ' + index + ' returned invalid iCal data');
+          }
+        })
+        .catch(function(err) {
+          console.warn("Events proxy " + index + " failed:", err.message);
+          tryProxy(index + 1);
+        });
+    }
+
+    tryProxy(0);
   })();
 </script>
