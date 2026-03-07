@@ -4,7 +4,7 @@ Welcome to the repository for the **West Country Leders** website! This is where
 
 ## 🔗 Quick Links
 - **🌍 Live Website:** [westcountryleders.co.uk](https://westcountryleders.co.uk)
-- **🏗️ Staging Environments:** Generated automatically on Pull Requests via Cloudflare Pages
+- **🏗️ Staging Environment:** [staging.westcountryleders.co.uk](https://staging.westcountryleders.co.uk) (Permanent staging link)
 
 ---
 
@@ -112,7 +112,7 @@ Then open `http://localhost:4000` in your browser.
 This site is automatically deployed and hosted using **Cloudflare Pages**.
 
 *   **Production:** Merging code into the `main` branch automatically deploys to the live site at [westcountryleders.co.uk](https://westcountryleders.co.uk).
-*   **Staging:** Creating a **Pull Request** against `main` will automatically generate a unique preview URL (staging environment) for that specific PR. This makes it easy to review changes before they go live!
+*   **Staging:** The staging environment is available at [staging.westcountryleders.co.uk](https://staging.westcountryleders.co.uk). Additionally, creating a **Pull Request** against `main` will automatically generate a unique preview URL for that specific PR. This makes it easy to review changes before they go live!
 *   **Monitoring & Status:** To check deployment logs, view build status, or manage the environments, log into the Cloudflare Dashboard at [dash.cloudflare.com](https://dash.cloudflare.com).
 
 ---
