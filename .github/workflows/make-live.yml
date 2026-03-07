@@ -61,7 +61,7 @@ jobs:
           Get-ChildItem -Path ./ -Recurse -Exclude $exclusions | Remove-Item -Recurse
 
           Write-Output "Copying across staging artifacts"
-          Copy-Item -Path $stagingDirectory/. ./ -Recurse -Force -Exclude .git, .github
+          Get-ChildItem -Path $stagingDirectory -Force | Where-Object { $_.Name -notmatch "^\.(git|github)$" } | Copy-Item -Destination ./ -Recurse -Force
 
           git remote set-url origin $productionGit
           git remote --verbose
