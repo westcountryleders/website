@@ -1,7 +1,7 @@
 ---
 title: "Root Tournament November 2026"
 date: 2026-11-14
-venue: "Tobacco Factory"
+venue: "Tobacco Factory, Bristol"
 address: "Raleigh Rd, Bristol, BS3 1TF"
 time: "10:00 - 22:00"
 reg_start: 2026-01-20
