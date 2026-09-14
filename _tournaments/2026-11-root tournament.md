@@ -1,5 +1,5 @@
 ---
-title: "Root Tournament 2026"
+title: "Root Tournament November 2026"
 date: 2026-11-14
 venue: "Tobacco Factory"
 address: "Raleigh Rd, Bristol, BS3 1TF"
