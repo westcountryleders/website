@@ -10,7 +10,7 @@ signup_url: "https://forms.gle/2bDjoVfZjn61rYLJA"
 layout: tournament
 ---
 
-We’re excited to announce that sign up for our first 2026 Root tournament is now open!
+We’re excited to announce that sign up for our second 2026 Root tournament is now open!
 Please submit the below form if you would like to sign up for our November ‘26 Root tournament!
 
 <div class="responsive-iframe-container">
