@@ -1,7 +1,9 @@
-{% assign entries = site.history | sort: "date" | reverse %}
-{% if entries.size > 0 %}
+{% assign all_entries = site.history | sort: "date" | reverse %}
+{% assign shown = 0 %}
 <div class="history-list">
-  {% for entry in entries %}
+  {% for entry in all_entries %}
+  {% unless entry.parent %}
+  {% assign shown = shown | plus: 1 %}
   <section class="history-entry" id="{{ entry.title | slugify }}">
     <header class="history-entry-header">
       <h2 class="history-entry-title">{{ entry.title }}</h2>
@@ -15,21 +17,52 @@
       {{ entry.content | markdownify }}
     </div>
 
-    {% if entry.photos and entry.photos.size > 0 %}
-    <div class="history-gallery">
-      {% for photo in entry.photos %}
-      <figure class="history-photo">
-        <a href="{{ photo.src | relative_url }}" target="_blank" rel="noopener">
-          <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | default: photo.caption | default: entry.title }}" loading="lazy">
-        </a>
-        {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
-      </figure>
+    {% include history-gallery.html photos=entry.photos %}
+
+    {% if entry.key %}
+    {% assign sections = site.history | where: "parent", entry.key | sort: "order" %}
+    {% assign groups = sections | map: "group" | uniq %}
+
+    {% if sections.size > 1 %}
+    <nav class="history-nav" id="tables-{{ entry.key }}" aria-label="Jump to a table">
+      <h3 class="history-nav-title">Find your table</h3>
+      {% for group in groups %}
+      {% if group %}
+      <div class="history-nav-group">
+        <span class="history-nav-label">{{ group }}</span>
+        <ul class="history-nav-list">
+          {% for s in sections %}
+          {% if s.group == group %}
+          <li><a href="#{{ s.title | slugify }}">{{ s.nav_label | default: s.title }}</a></li>
+          {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
       {% endfor %}
-    </div>
+    </nav>
+    {% endif %}
+
+    {% for section in sections %}
+    <section class="history-section" id="{{ section.title | slugify }}">
+      <h3 class="history-section-title">{{ section.title }}</h3>
+      {% if section.trophy %}
+      <p class="history-section-trophy"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Trophy: {{ section.trophy }}</p>
+      {% endif %}
+      <div class="history-entry-body">
+        {{ section.content | markdownify }}
+      </div>
+      {% include history-gallery.html photos=section.photos %}
+      {% if sections.size > 1 %}
+      <p class="history-back"><a href="#tables-{{ entry.key }}">&uarr; Back to all tables</a></p>
+      {% endif %}
+    </section>
+    {% endfor %}
     {% endif %}
   </section>
+  {% endunless %}
   {% endfor %}
 </div>
-{% else %}
+{% if shown == 0 %}
 <p style="text-align: center; font-style: italic; margin: 40px 0;">Our history is still being written. Check back soon!</p>
 {% endif %}
