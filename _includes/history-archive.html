@@ -1,0 +1,35 @@
+{% assign entries = site.history | sort: "date" | reverse %}
+{% if entries.size > 0 %}
+<div class="history-list">
+  {% for entry in entries %}
+  <section class="history-entry" id="{{ entry.title | slugify }}">
+    <header class="history-entry-header">
+      <h2 class="history-entry-title">{{ entry.title }}</h2>
+      <p class="history-entry-meta">
+        <span><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> {{ entry.date | date: "%-d %B %Y" }}</span>
+        {% if entry.venue %}<span><i class="fa-solid fa-map-pin" aria-hidden="true"></i> {{ entry.venue }}</span>{% endif %}
+      </p>
+    </header>
+
+    <div class="history-entry-body">
+      {{ entry.content | markdownify }}
+    </div>
+
+    {% if entry.photos and entry.photos.size > 0 %}
+    <div class="history-gallery">
+      {% for photo in entry.photos %}
+      <figure class="history-photo">
+        <a href="{{ photo.src | relative_url }}" target="_blank" rel="noopener">
+          <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | default: photo.caption | default: entry.title }}" loading="lazy">
+        </a>
+        {% if photo.caption %}<figcaption>{{ photo.caption }}</figcaption>{% endif %}
+      </figure>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </section>
+  {% endfor %}
+</div>
+{% else %}
+<p style="text-align: center; font-style: italic; margin: 40px 0;">Our history is still being written. Check back soon!</p>
+{% endif %}
