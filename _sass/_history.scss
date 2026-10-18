@@ -38,15 +38,51 @@
   }
 }
 
+.history-entry-body {
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 18px auto;
+    border: 3px solid $wood-border;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 $wood-medium;
+  }
+
+  table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+
+  th,
+  td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid rgba($wood-dark, 0.25);
+  }
+
+  th {
+    background: rgba($wood-medium, 0.35);
+    color: $wood-dark;
+  }
+}
+
+// Masonry-style columns so portrait and landscape photos keep their shape
 .history-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(160px, 28vw, 260px), 1fr));
-  gap: 16px;
+  columns: 3 240px;
+  column-gap: 16px;
   margin-top: 20px;
 }
 
 .history-photo {
-  margin: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 16px;
+  break-inside: avoid;
   background: $parchment-base;
   border: 3px solid $wood-border;
   border-radius: 8px;
@@ -61,8 +97,7 @@
   img {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+    height: auto;
   }
 
   figcaption {
