@@ -107,3 +107,99 @@
     color: $text-color;
   }
 }
+
+// Per-table sections inside a tournament entry
+.history-section {
+  scroll-margin-top: 100px; // keeps the heading clear of the sticky menu when jumped to
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 2px dashed rgba($wood-dark, 0.3);
+}
+
+.history-section-title {
+  margin: 0 0 14px;
+  color: $wood-dark;
+  font-size: clamp(1.15rem, 3.2vw, 1.45rem);
+}
+
+.history-section-trophy {
+  margin: -6px 0 14px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: rgba($wood-dark, 0.85);
+
+  i {
+    margin-right: 4px;
+    color: $accent-color;
+  }
+}
+
+.history-back {
+  margin: 14px 0 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+// "Find your table" quick links
+.history-nav {
+  margin: 28px 0 8px;
+  padding: 18px 20px;
+  background: $parchment-base;
+  border: 3px solid $wood-border;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0 $wood-medium;
+  scroll-margin-top: 100px;
+}
+
+.history-nav-title {
+  margin: 0 0 12px;
+  color: $wood-dark;
+  font-size: 1.1rem;
+}
+
+.history-nav-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px 14px;
+  padding: 8px 0;
+
+  & + & {
+    border-top: 1px dashed rgba($wood-dark, 0.3);
+  }
+}
+
+.history-nav-label {
+  min-width: 52px;
+  font-weight: 800;
+  color: $wood-dark;
+}
+
+.history-nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a {
+    display: inline-block;
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $wood-dark;
+    text-decoration: none;
+    background: rgba($wood-medium, 0.35);
+    border: 2px solid $wood-border;
+    border-radius: 999px;
+    transition: background 0.15s ease, transform 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      background: $wood-medium;
+      transform: translateY(-2px);
+    }
+  }
+}
