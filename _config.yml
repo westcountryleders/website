@@ -23,6 +23,8 @@ collections:
   tournaments:
     output: true
     permalink: /tournaments/:name/
+  history:
+    output: false
 
 exclude:
   - functions
