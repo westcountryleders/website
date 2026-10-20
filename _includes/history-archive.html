@@ -33,7 +33,7 @@
         <ul class="history-nav-list">
           {% for s in sections %}
           {% if s.group == group %}
-          <li><a href="#{{ s.title | slugify }}">{{ s.nav_label | default: s.title }}</a></li>
+          <li><a href="#{{ entry.key }}-{{ s.title | slugify }}">{{ s.nav_label | default: s.title }}</a></li>
           {% endif %}
           {% endfor %}
         </ul>
@@ -44,7 +44,7 @@
     {% endif %}
 
     {% for section in sections %}
-    <section class="history-section" id="{{ section.title | slugify }}">
+    <section class="history-section" id="{{ entry.key }}-{{ section.title | slugify }}">
       <h3 class="history-section-title">{{ section.title }}</h3>
       {% if section.trophy %}
       <p class="history-section-trophy"><i class="fa-solid fa-trophy" aria-hidden="true"></i> Trophy: {{ section.trophy }}</p>
