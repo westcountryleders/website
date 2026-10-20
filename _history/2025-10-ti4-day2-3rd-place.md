@@ -1,6 +1,7 @@
 ---
 title: "Day 2: 3rd Place Game"
 parent: ti4-2025-10
+trophy: "Carrier"
 order: 12
 date: 2025-10-19
 group: "Day 2"

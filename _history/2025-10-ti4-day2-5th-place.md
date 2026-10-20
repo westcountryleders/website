@@ -1,6 +1,7 @@
 ---
 title: "Day 2: 5th Place Game"
 parent: ti4-2025-10
+trophy: "Destroyer"
 order: 10
 date: 2025-10-19
 group: "Day 2"

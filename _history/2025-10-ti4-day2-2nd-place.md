@@ -1,6 +1,7 @@
 ---
 title: "Day 2: 2nd Place Game"
 parent: ti4-2025-10
+trophy: "Dreadnought"
 order: 13
 date: 2025-10-19
 group: "Day 2"

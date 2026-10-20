@@ -20,7 +20,7 @@ Our October 2025 Twilight Imperium tournament, *Leders of the Imperium*, took pl
 
 Saturday was made up of 8 games of 6 players, with randomised seating and the same six slices at every table, but randomised factions. Nevertheless, it was a Battle of the Brothers, as the Yin Brotherhood appeared in 5 of the 8 games! Our reigning champion Duncan, who had piloted Sardakk N’orr and the Federation of Sol to the Galactic Throne in previous campaigns, defended his title as the Nekro Virus.
 
-Each Day 1 table winner went through to an 8-player Grand Final on the Sunday, played for the War Sun trophy. Everyone else was seated into Runners-Up games by their Day 1 points, then initiative in the final round, then their faction’s win rate. The winners of the 2nd, 3rd, 4th and 5th place games took those places overall, and a sixth game was played with the Discordant Stars expansion.
+Each Day 1 table winner went through to an 8-player Grand Final on the Sunday, played for the War Sun trophy. Everyone else was seated into Runners-Up games by their Day 1 points, then initiative in the final round, then their faction’s win rate. The winners of the 2nd, 3rd, 4th and 5th place games took those places overall, along with the Dreadnought, Carrier, Cruiser and Destroyer trophies. A sixth game was played with the Discordant Stars expansion.
 
 ### Final standings
 
