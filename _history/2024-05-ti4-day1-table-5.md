@@ -20,7 +20,7 @@ Thousands of light years away, the Naalu Collective, led by David, formed the ne
 | 1st | David (winner) | Naalu Collective |
 | 2nd | Maciek | Vuil’Raith Cabal |
 | 3rd | Marc | Xxcha Kingdom |
-| — | Matt P | Embers of Muaat |
+| — | Matt P | Mahact Gene-Sorcerers |
 | — | Sam | Argent Flight |
 | — | Conrad | Nomad |
 

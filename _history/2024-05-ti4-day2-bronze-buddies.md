@@ -23,7 +23,7 @@ photos:
 
 Plenty of betrayals, home world occupations (even by support partners) and complete chaos were the name of this game. In the end, Rich B’s Naaz-Rokha Alliance clinched the final points, even while holding the 7 initiative, to take home the Bronze Dreadnought.
 
-His subtle manoeuvres seemingly eluded his foes, who were busy decimating each other: Mark’s Sardakk N’orr took their own support partner’s (Peter’s Hacan) home planet, Neil’s Keleres Grand Fleet was decimating its foes, and Alex P’s Ghosts of Creuss were causing havoc with their hero and wormhole technology.
+His subtle manoeuvres seemingly eluded his foes, who were busy decimating each other: Mark’s Sardakk N’orr took their own support partner’s (Peter’s Hacan) home planet, Neil’s Keleres Grand Fleet was decimating its foes, and Alex L’s Ghosts of Creuss were causing havoc with their hero and wormhole technology.
 
 | Place | Player | Faction |
 |:--|:--|:--|
@@ -31,7 +31,7 @@ His subtle manoeuvres seemingly eluded his foes, who were busy decimating each o
 | — | Neil | Council Keleres |
 | — | Marc | Titans of Ul |
 | — | Mark R | Sardakk N’orr |
-| — | Alex P | Ghosts of Creuss |
+| — | Alex L | Ghosts of Creuss |
 | — | Peter | Emirates of Hacan |
 
 The Bronze Buddies galaxy from its Milty Draft, with each player’s home position:

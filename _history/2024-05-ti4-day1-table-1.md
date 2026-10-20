@@ -36,7 +36,7 @@ This Galactic Council were also big fans of War Suns: every time one was built, 
 | 3rd | Miriam | Barony of Letnev |
 | 4th | Cory | Mahact Gene-Sorcerers |
 | 5th | Fay | Naaz-Rokha Alliance |
-| 6th | Alex P | Emirates of Hacan |
+| 6th | Alex L | Emirates of Hacan |
 
 The Table 1 galaxy from its Milty Draft, with each player’s home position:
 
