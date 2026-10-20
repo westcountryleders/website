@@ -1,6 +1,7 @@
 ---
 title: "Day 1: Table 6"
 parent: ti4-2025-10
+trophy: "Infantry"
 order: 6
 date: 2025-10-18
 group: "Day 1"
