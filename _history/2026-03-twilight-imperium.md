@@ -38,7 +38,7 @@ Our March 2026 Twilight Imperium tournament, *Leders of the Imperium*, took plac
 
 Each Day 1 table winner went through to the Grand Final, which was played as a single 8-player game. Everyone else carried on in the Runners-Up games on Day 2, seeded by score and initiative: six games of 6 players. A few players couldn’t make Day 2, so our reserve Matt and organiser James stepped in to fill the gaps.
 
-On Day 2, each game was played for a ship trophy: the War Sun of Champions for the Grand Final, then the Flagship, Dreadnought, Carrier, Cruiser, Destroyer and Fighter for the Runners-Up games.
+Every Day 1 table winner took home a supersized Infantry trophy. On Day 2, the Grand Final was played for the Galactic Emperor trophy, and each Runners-Up game for a ship trophy: the Flagship, Dreadnought, Carrier, Cruiser, Destroyer and Fighter.
 
 Adam (Beavs) won his Day 1 table with the Vuil’Raith Cabal, then took the Grand Final with the Last Bastion to become our new Galactic Emperor.
 

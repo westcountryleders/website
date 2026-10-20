@@ -5,6 +5,7 @@ order: 6
 date: 2026-03-28
 group: "Day 1"
 nav_label: "Table 6"
+trophy: "Infantry"
 photos:
   - src: /assets/img/history/ti4-2026-03-table6-mascot.jpg
     caption: "Table 6’s mascot keeping watch"

@@ -5,6 +5,7 @@ order: 4
 date: 2026-03-28
 group: "Day 1"
 nav_label: "Table 4"
+trophy: "Infantry"
 photos:
   - src: /assets/img/history/ti4-2026-03-table4-a.jpg
     caption: "Thinking hard on Table 4"

@@ -5,6 +5,7 @@ order: 3
 date: 2026-03-28
 group: "Day 1"
 nav_label: "Table 3"
+trophy: "Infantry"
 photos:
   - src: /assets/img/history/ti4-2026-03-table3-a.jpg
     caption: "Making a move on Table 3"

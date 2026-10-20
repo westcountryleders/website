@@ -5,6 +5,7 @@ order: 8
 date: 2026-03-28
 group: "Day 1"
 nav_label: "Table 8"
+trophy: "Infantry"
 photos:
   - src: /assets/img/history/ti4-2026-03-table8-a.jpg
     caption: "Taking a moment away from the board"

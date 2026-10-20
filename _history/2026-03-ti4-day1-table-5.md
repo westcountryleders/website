@@ -5,6 +5,7 @@ order: 5
 date: 2026-03-28
 group: "Day 1"
 nav_label: "Table 5"
+trophy: "Infantry"
 photos:
   - src: /assets/img/history/ti4-2026-03-table5-marker.jpg
     caption: "The Table 5 marker"

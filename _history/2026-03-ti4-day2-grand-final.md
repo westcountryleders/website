@@ -5,7 +5,7 @@ order: 15
 date: 2026-03-29
 group: "Day 2"
 nav_label: "Table 1 · Grand Final"
-trophy: "War Sun of Champions"
+trophy: "Galactic Emperor"
 photos:
   - src: /assets/img/history/ti4-2026-03-day2-grand-final-a.jpg
     caption: "The Grand Final galaxy"
@@ -39,11 +39,11 @@ photos:
     caption: "The Grand Final players, with Adam holding the Galactic Emperor trophy"
 ---
 
-The Grand Final brought together all eight Day 1 winners for a single 8-player game. It was described as a slog of a game, but Adam (Beavs) took the War Sun of Champions with the Last Bastion on 10 points, becoming our new Galactic Emperor. Bradley, Charlie, Francesco and Lewis all finished on 9, separated by initiative order, while Chris, Marc and Peter ended on 8.
+The Grand Final brought together all eight Day 1 winners for a single 8-player game. It was described as a slog of a game, but Adam (Beavs) took the Galactic Emperor trophy with the Last Bastion on 10 points, becoming our new Galactic Emperor. Bradley, Charlie, Francesco and Lewis all finished on 9, separated by initiative order, while Chris, Marc and Peter ended on 8.
 
 The last round was played under Checks and Balances, so each player picked a strategy card and then handed it to someone else. Adam received the 2 from Sardakk N’orr. He tried to give them the 8, but the Yssaril Tribes played Public Disgrace on it. Sardakk tried to Sabotage that, and the Xxcha Kingdom cancelled the Sabotage with Instinct Training. Adam couldn’t risk Sardakk destroying their own destroyer before he could, so he gave them the 3 instead. The Xxcha ended up with the 1, and the Obsidian got the 8.
 
-At the end of round 5, Sardakk had placed a destroyer in front of their own home system to score Cut Supply Lines, using Faunus and Integrated Economy. With the first action of round 6, Adam scored Betray a Friend by attacking the Yin Brotherhood there, which won him the game. Bradley reckoned that the Yin, with 4 hazardous and 4 industrial planets, would have had the game wrapped up with favourable objectives.
+At the end of round 5, Sardakk had placed a destroyer in front of their own home system to score Cut Supply Lines, using Faunus, the new legendary planet from Thunder’s Edge, and Integrated Economy. With the first action of round 6, Adam scored Betray a Friend by attacking the Yin Brotherhood there, which won him the game. Bradley reckoned that the Yin, with 4 hazardous and 4 industrial planets, would have had the game wrapped up with favourable objectives.
 
 The Grand Final was played on Nick’s copy, chosen for its beautiful ships.
 

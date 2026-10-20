@@ -5,6 +5,7 @@ order: 2
 date: 2026-03-28
 group: "Day 1"
 nav_label: "Table 2"
+trophy: "Infantry"
 photos:
   - src: /assets/img/history/ti4-2026-03-table2-a.jpg
     caption: "Table 2 mid-game"
