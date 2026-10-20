@@ -31,14 +31,14 @@ Saar had taken an early point lead, so the rest of the table piled in: everyone 
 
 Near the end of the round it was clear that Neil's Argent Flight would reach 10 points with Diplomacy before David's Mahact could get there with Warfare. David had a plan to use the Mahact hero to move the huge fleet out of Argent's home system, but it was risky. Then Alex spotted that Saar and Argent had swapped Support for the Throne, so eliminating Saar would also stop Argent reaching 10. David used the hero to clear out the Barony's massive fleet, finished off the Clan of Saar, and took the win. Good game, all!
 
-| Place | Player | Points | Home planets | Initiative |
-|:--|:--|:--|:--|:--|
-| 1 | David (winner) | 11 | All held | 6 |
-| 2 | Neil | 9 | All held | 2 |
-| 3 | Will | 9 | All held | 3 |
-| 4 | Alex | 8 | All held | 8 |
-| 5 | Brendan | 7 | All held | 7 |
-| 6 | Ghazi | 0 | Eliminated | — |
+| Place | Player | Faction | Points | Home planets | Initiative |
+|:--|:--|:--|:--|:--|:--|
+| 1 | David (winner) | Mahact Gene-Sorcerers | 11 | All held | 6 |
+| 2 | Neil | Argent Flight | 9 | All held | 2 |
+| 3 | Will | Barony of Letnev | 9 | All held | 3 |
+| 4 | Alex | Council Keleres | 8 | All held | 8 |
+| 5 | Brendan | Yssaril Tribes | 7 | All held | 7 |
+| 6 | Ghazi | Clan of Saar | 0 | Eliminated | — |
 
 ![Final rankings for Day 2, Table 7, as posted on our Discord server](/assets/img/history/ti4-2026-10-day2-table7-rankings.png)
 
