@@ -17,14 +17,14 @@ photos:
 
 Readying for the emergence of a new empire, Duncan’s fleet-less Sardakk N’orr took over the Galactic Council and formed the new N’orr Empire, with their Commanders leading them to greatness all across the galaxy. Rafal’s Naalu Collective attained secondary influence under the Sardakk domain, and Neil’s Embers of Muaat achieved tertiary command.
 
-| Player | Faction |
-|:--|:--|
-| Neil (3rd) | Embers of Muaat |
-| Duncan (winner) | Sardakk N’orr |
-| Liam | Ghosts of Creuss |
-| Will | Xxcha Kingdom |
-| Rafal (2nd) | Naalu Collective |
-| Peter | Nomad |
+| Place | Player | Faction |
+|:--|:--|:--|
+| 1st | Duncan (winner) | Sardakk N’orr |
+| 2nd | Rafal | Naalu Collective |
+| 3rd | Neil | Embers of Muaat |
+| 6th | Will | Xxcha Kingdom |
+| — | Liam | Ghosts of Creuss |
+| — | Peter | Nomad |
 
 The Table 4 galaxy from its Milty Draft, with each player’s home position:
 

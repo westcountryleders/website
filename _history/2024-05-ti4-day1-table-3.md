@@ -17,14 +17,14 @@ photos:
 
 Here Katie’s Argent Flight showed off the power of their destroyers and their eagle-like mobility, taking the Galactic Throne. Dariel’s Vuil’Raith Cabal devoured all but them, and had to bend the knee. Amid all the chaos, Patrick’s Empyrean became the third most prominent faction on the Council.
 
-| Player | Faction |
-|:--|:--|
-| Rich B | Xxcha Kingdom |
-| Patrick (3rd) | Empyrean |
-| Mike | Mentak Coalition |
-| Mark R | Universities of Jol-Nar |
-| Katie (winner) | Argent Flight |
-| Dariel (2nd) | Vuil’Raith Cabal |
+| Place | Player | Faction |
+|:--|:--|:--|
+| 1st | Katie (winner) | Argent Flight |
+| 2nd | Dariel | Vuil’Raith Cabal |
+| 3rd | Patrick | Empyrean |
+| 4th | Mark R | Universities of Jol-Nar |
+| — | Rich B | Xxcha Kingdom |
+| — | Mike | Mentak Coalition |
 
 The Table 3 galaxy from its Milty Draft, with each player’s home position:
 

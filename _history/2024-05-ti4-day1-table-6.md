@@ -23,14 +23,14 @@ Hidden away in the corner, James’s Federation of Sol snuck to dominance, first
 
 Not long after, Tom’s Argent Flight were 1 resource away from victory, and Simon’s Naalu Collective one home planet away from glory. El’s Mahact Gene-Sorcerers traversed the whole galaxy to take Maaluuk, and both El and Omar’s Naaz-Rokha did what they could to starve the Argent of the resources they needed to win through Imperial. That left the Federation, with its all-encompassing technology and recently researched Space Dock II, able to sway the Council into forming an Empire under its leadership, with Simon’s Naalu second and Tom’s Argent third.
 
-| Player | Faction |
-|:--|:--|
-| Tom (3rd) | Argent Flight |
-| El | Mahact Gene-Sorcerers |
-| Jon | Winnu |
-| James (winner) | Federation of Sol |
-| Omar | Naaz-Rokha Alliance |
-| Simon (2nd) | Naalu Collective |
+| Place | Player | Faction |
+|:--|:--|:--|
+| 1st | James (winner) | Federation of Sol |
+| 2nd | Simon | Naalu Collective |
+| 3rd | Tom | Argent Flight |
+| — | El | Mahact Gene-Sorcerers |
+| — | Jon | Winnu |
+| — | Omar | Naaz-Rokha Alliance |
 
 The Table 6 galaxy from its Milty Draft, with each player’s home position:
 

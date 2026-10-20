@@ -29,14 +29,14 @@ The leaders of the Cqaark were no match for their competitors, with Rich’s Yss
 
 This Galactic Council were also big fans of War Suns: every time one was built, a giant round of applause was given to the dock workers who made it happen. However, the real winner was Brian, the Destroyer of Worlds, otherwise known as the cute yellow rubber duckie.
 
-| Player | Faction |
-|:--|:--|
-| Rich (winner) | Yssaril Tribes |
-| Fay | Naaz-Rokha Alliance |
-| Cory | Mahact Gene-Sorcerers |
-| Alex P | Emirates of Hacan |
-| Miriam (3rd) | Barony of Letnev |
-| Matt (Positron) (2nd) | Council Keleres |
+| Place | Player | Faction |
+|:--|:--|:--|
+| 1st | Rich (winner) | Yssaril Tribes |
+| 2nd | Matt (Positron) | Council Keleres |
+| 3rd | Miriam | Barony of Letnev |
+| 4th | Cory | Mahact Gene-Sorcerers |
+| 5th | Fay | Naaz-Rokha Alliance |
+| 6th | Alex P | Emirates of Hacan |
 
 The Table 1 galaxy from its Milty Draft, with each player’s home position:
 

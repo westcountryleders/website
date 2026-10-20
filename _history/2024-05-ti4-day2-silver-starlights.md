@@ -23,14 +23,14 @@ photos:
 
 Those just below the finalists vied to become their second-in-command. Not even a hangover could stop Maciek taking the win, as his technologically advanced fishies of the Universities of Jol-Nar pushed forward and took control of the Council amid all the fighting throughout the galaxy, earning the Silver Flagship.
 
-| Player | Faction |
-|:--|:--|
-| Maciek (winner) | Universities of Jol-Nar |
-| Rafal | Federation of Sol |
-| Miriam | Barony of Letnev |
-| Luke | Nekro Virus |
-| Patrick | Yin Brotherhood |
-| Tom | Embers of Muaat |
+| Place | Player | Faction |
+|:--|:--|:--|
+| 1st | Maciek (winner) | Universities of Jol-Nar |
+| — | Rafal | Federation of Sol |
+| — | Miriam | Barony of Letnev |
+| — | Luke | Nekro Virus |
+| — | Patrick | Yin Brotherhood |
+| — | Tom | Embers of Muaat |
 
 The Silver Starlights galaxy from its Milty Draft, with each player’s home position:
 

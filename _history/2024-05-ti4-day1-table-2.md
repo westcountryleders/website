@@ -29,14 +29,14 @@ This galaxy had a different result, with Ben’s Council Keleres achieving supre
 
 An extra round of applause goes to the Titans for managing second place even after their home planet of Elysium was conquered in the first round by Lee’s Argent Flight, who braved a gravity rift to get there.
 
-| Player | Faction |
-|:--|:--|
-| Matt (Zero) | Yssaril Tribes |
-| Ben (winner) | Council Keleres |
-| Lee | Argent Flight |
-| Luke (3rd) | Ghosts of Creuss |
-| Callum (2nd) | Titans of Ul |
-| Alex E | Nomad |
+| Place | Player | Faction |
+|:--|:--|:--|
+| 1st | Ben (winner) | Council Keleres |
+| 2nd | Callum | Titans of Ul |
+| 3rd | Luke | Ghosts of Creuss |
+| — | Matt (Zero) | Yssaril Tribes |
+| — | Lee | Argent Flight |
+| — | Alex E | Nomad |
 
 The Table 2 galaxy from its Milty Draft, with each player’s home position:
 

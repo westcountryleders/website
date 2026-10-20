@@ -35,11 +35,11 @@ However, nobody could stop Duncan’s Federation of Sol as they traversed the ga
 
 | Place | Player | Faction | Points |
 |:--|:--|:--|:--|
-| 1 | Duncan (winner) | Federation of Sol | Won |
+| 1 | Duncan (winner) | Federation of Sol | 10 |
 | 2 | David | Xxcha Kingdom | 9 |
 | 3 | Rich | Naalu Collective | 8 |
-| 4 | Katie | Mahact Gene-Sorcerers | 7 |
-| 4 | Ben | Arborec | 7 |
+| 4 | Katie | Mahact Gene-Sorcerers | 8 |
+| 5 | Ben | Arborec | 7 |
 | 6 | James | Argent Flight | 5 |
 
 The Final was drafted with a Milty Draft, and you can still view the [Final draft](https://milty.shenanigans.be/d/6653e2777f170) online.
