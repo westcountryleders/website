@@ -19,18 +19,18 @@ photos:
     caption: "The score track and objectives"
 ---
 
-Josh took the Dreadnought with 10 points, holding all of his home planets. Adam finished second on 9 points.
+Josh's L1Z1X Mindnet took the Dreadnought with 10 points, holding all of his home planets. Adam finished second on 9 points.
 
 Sam, Fin and Pete all finished on 8 points, separated by initiative order in that order, with Brent on 6. Every player held all of their home planets at the end of the game. Pete had to dash off as the game ended, so he missed the photo.
 
-| Place | Player | Points | Home planets | Initiative |
-|:--|:--|:--|:--|:--|
-| 1 | Josh (winner) | 10 | All held | 6 |
-| 2 | Adam | 9 | All held | 8 |
-| 3 | Sam | 8 | All held | 1 |
-| 4 | Fin | 8 | All held | 2 |
-| 5 | Pete | 8 | All held | 3 |
-| 6 | Brent | 6 | All held | 7 |
+| Place | Player | Faction | Points | Home planets | Initiative |
+|:--|:--|:--|:--|:--|:--|
+| 1 | Josh (winner) | L1Z1X Mindnet | 10 | All held | 6 |
+| 2 | Adam | Ral Nel Consortium | 9 | All held | 8 |
+| 3 | Sam | Yin Brotherhood | 8 | All held | 1 |
+| 4 | Fin | The Winnu | 8 | All held | 2 |
+| 5 | Pete | The Empyrean | 8 | All held | 3 |
+| 6 | Brent | Argent Flight | 6 | All held | 7 |
 
 ![Final rankings for Day 2, Table 3, as posted on our Discord server](/assets/img/history/ti4-2026-10-day2-table3-rankings.png)
 
