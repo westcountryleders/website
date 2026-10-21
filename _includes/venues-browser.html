@@ -1,37 +1,26 @@
+{% assign regular_venues = site.data.venues | where: "status", "regular" %}
+{% assign other_venues = site.data.venues | where_exp: "v", "v.status != 'regular'" %}
+
 <!-- Grid of Cards (Click trigger) -->
+<h2 class="venues-section-title">Regular meet-ups</h2>
 <div class="events-grid">
-  {% for venue in site.data.venues %}
-  <div class="event-card-wrapper" onclick="openVenueModal('venue-modal-{{ forloop.index }}')">
-    <div class="event-card" style="cursor: pointer;">
-      <div class="card-header-badge" style="background-color: {{ venue.badge_style | default: 'orange' }};">
-        {{ venue.badge }}
-      </div>
-      <div class="card-content">
-        <div class="event-title">{{ venue.title }}</div>
-        <div class="event-location">
-          <i class="fa-solid fa-calendar-days"></i> {{ venue.frequency }}
-        </div>
-        <div class="stat-block">
-            <div class="stat-box">
-              <span class="stat-label">Time</span>
-              <span class="stat-value">{{ venue.time }}</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-label">Price</span>
-              <span class="stat-value">{{ venue.price }}</span>
-            </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  {% endfor %}
+  {% for venue in regular_venues %}{% include venue-card.html venue=venue %}{% endfor %}
 </div>
+
+{% if other_venues.size > 0 %}
+<h2 class="venues-section-title">Occasional &amp; paused</h2>
+<p class="venues-section-intro">We still meet at these now and then, or will again soon. We also run one-off game nights (big games like John Company or Oath) whenever there's interest: keep an eye on Discord.</p>
+<div class="events-grid venues-grid--quiet">
+  {% for venue in other_venues %}{% include venue-card.html venue=venue %}{% endfor %}
+</div>
+{% endif %}
 
 <!-- Modal Structures (Hidden by default) -->
 {% for venue in site.data.venues %}
-<div id="venue-modal-{{ forloop.index }}" class="venue-modal-overlay" onclick="closeVenueModal(event, 'venue-modal-{{ forloop.index }}')">
+{% assign modal_id = venue.title | slugify | prepend: 'venue-modal-' %}
+<div id="{{ modal_id }}" class="venue-modal-overlay" onclick="closeVenueModal(event, '{{ modal_id }}')">
   <div class="venue-modal-content">
-    <button class="venue-modal-close" onclick="closeVenueModal(event, 'venue-modal-{{ forloop.index }}')">&times;</button>
+    <button class="venue-modal-close" onclick="closeVenueModal(event, '{{ modal_id }}')">&times;</button>
     
     <div class="venue-modal-header">
       <div class="venue-header-content">
@@ -46,6 +35,7 @@
       {% endif %}
       
       <div class="venue-details">
+        {% if venue.status_note %}<p class="venue-status-note"><i class="fa-solid fa-circle-info"></i> {{ venue.status_note }}</p>{% endif %}
         <p class="venue-description">{{ venue.description }}</p>
         
         <div class="venue-info-grid">
@@ -67,7 +57,7 @@
              <div class="venue-icon"><i class="fa-solid fa-calendar-days"></i></div>
              <div class="venue-data">
                <span class="venue-label">Frequency</span>
-               <span class="venue-value">{{ venue.frequency }}</span>
+               <span class="venue-value">{{ venue.frequency }}{% if venue.next_date %}<span class="venue-next" data-next-date="{{ venue.next_date }}" data-repeat-days="{{ venue.repeat_days }}"></span>{% endif %}</span>
              </div>
            </div>
            <div class="venue-info-item">
@@ -78,6 +68,14 @@
              </div>
            </div>
         </div>
+
+        {% if venue.links %}
+        <div class="venue-links">
+          {% for link in venue.links %}
+          <a href="{% if link.url contains '://' %}{{ link.url }}{% else %}{{ link.url | relative_url }}{% endif %}"{% if link.url contains '://' %} target="_blank" rel="noopener"{% endif %} class="venue-link-button">{{ link.name }} &rarr;</a>
+          {% endfor %}
+        </div>
+        {% endif %}
 
         {% if venue.map_iframe and venue.map_iframe != "" %}
         <div class="venue-map-container">
@@ -91,6 +89,51 @@
 {% endfor %}
 
 <style>
+/* Sections */
+.venues-section-title {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 800;
+  color: #4d2d18;
+  font-size: 1.35rem;
+  margin: 30px 0 12px;
+}
+.venues-section-intro { margin: -4px 0 18px; }
+.venues-grid--quiet .event-card { background: #f3ece0; }
+.venues-grid--quiet .event-card .event-title { color: #6e4c2f; }
+.venue-card-note {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6e4c2f;
+  background: rgba(212, 167, 106, 0.18);
+  border-left: 3px solid #d4a76a;
+  border-radius: 3px;
+  padding: 6px 10px;
+  margin: -8px 0 14px;
+  line-height: 1.35;
+}
+.venue-next { display: block; font-weight: 700; color: #2e7d6b; margin-top: 2px; }
+.venue-next:empty { display: none; }
+.venue-status-note {
+  font-weight: 700;
+  color: #6e4c2f;
+  background: rgba(212, 167, 106, 0.18);
+  border-radius: 6px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+}
+.venue-links { display: flex; flex-wrap: wrap; gap: 10px; margin: 10px 0 5px; }
+.venue-link-button {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 2px solid #6e4c2f;
+  border-radius: 6px;
+  font-weight: 700;
+  color: #4d2d18 !important;
+  background: #e8dcc5;
+  text-decoration: none;
+}
+.venue-link-button:hover { background: #d4a76a; }
+
 /* Modal Styles */
 .venue-map-container {
   margin-top: 25px;
@@ -303,6 +346,19 @@ function closeVenueModal(event, modalId) {
     document.body.style.overflow = 'auto'; // Restore scrolling
   }
 }
+
+// Show the next date for repeating meet-ups (e.g. fortnightly at Replay)
+document.addEventListener('DOMContentLoaded', function() {
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  document.querySelectorAll('.venue-next[data-next-date]').forEach(function(el) {
+    const parts = el.dataset.nextDate.split('-').map(Number);
+    const step = parseInt(el.dataset.repeatDays, 10);
+    let next = new Date(parts[0], parts[1] - 1, parts[2]);
+    if (step > 0) { while (next < today) { next.setDate(next.getDate() + step); } }
+    if (next < today) return;
+    el.textContent = 'Next: ' + next.toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  });
+});
 
 // Close on Escape key
 document.addEventListener('keydown', function(event) {
