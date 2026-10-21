@@ -31,7 +31,7 @@
   status: regular
   frequency: "Regular sessions"
   time: "See Discord"
-  price: "See Discord"
+  price: "Free"
   url: "#west-country-marches"
   badge: "D&D"
   badge_style: "crimson"
@@ -40,7 +40,7 @@
     Katie's drop-in Dungeons & Dragons campaign, set in the land of Umber. There's no
     fixed party: each session, whoever can make it picks a quest and sets out from the
     city of Lilyhaven. Sessions are arranged in the West Country Marches channels on our
-    Discord, and you can read the story so far on our History page.
+    Discord. It's free to join in, and you can read the story so far on our History page.
   links:
     - { name: "The story so far", url: "/history/#d-d-the-west-country-marches" }
     - { name: "Our Discord", url: "https://discord.gg/JuuxmmbgG7" }
