@@ -1,0 +1,27 @@
+{% assign venue = include.venue %}
+{% assign modal_id = venue.title | slugify | prepend: 'venue-modal-' %}
+<div class="event-card-wrapper" onclick="openVenueModal('{{ modal_id }}')">
+  <div class="event-card" style="cursor: pointer;">
+    <div class="card-header-badge" style="background-color: {{ venue.badge_style | default: 'orange' }};">
+      {{ venue.badge }}
+    </div>
+    <div class="card-content">
+      <div class="event-title">{{ venue.title }}</div>
+      <div class="event-location">
+        <i class="fa-solid fa-calendar-days"></i> {{ venue.frequency }}
+        {% if venue.next_date %}<span class="venue-next" data-next-date="{{ venue.next_date }}" data-repeat-days="{{ venue.repeat_days }}"></span>{% endif %}
+      </div>
+      {% if venue.status_note %}<div class="venue-card-note">{{ venue.status_note }}</div>{% endif %}
+      <div class="stat-block">
+          <div class="stat-box">
+            <span class="stat-label">Time</span>
+            <span class="stat-value">{{ venue.time }}</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-label">Price</span>
+            <span class="stat-value">{{ venue.price }}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
