@@ -14,9 +14,9 @@ photos:
   - src: /assets/img/history/arcs-2025-01-gathering.jpg
     caption: "Everyone gathers for the prize-giving"
   - src: /assets/img/history/arcs-2025-01-champion-1.jpg
-    caption: "One of our champions with his trophy and vouchers"
+    caption: "Art (BioTech), champion of Final B, with his trophy and Excelsior vouchers"
   - src: /assets/img/history/arcs-2025-01-champion-2.jpg
-    caption: "Vouchers and a trophy for our other champion"
+    caption: "Hugo (Affectionate Isopod), champion of Final A, receives his trophy and vouchers, with Art applauding"
   - src: /assets/img/history/arcs-2025-01-trophy-home.jpg
     caption: "Hugo’s trophy in its new home"
 ---
