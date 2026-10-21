@@ -7,7 +7,10 @@
       {% if item.dropdown %}
         <div class="nav-dropdown">
           <a href="{{ item.url | relative_url }}" class="menu-link nav-dropdown-trigger">{{ item.name }} <i class="fa-solid fa-chevron-down"></i></a>
-          <div class="nav-dropdown-content">
+          <div class="nav-dropdown-content{% if item.dropdown == 'history' %} nav-dropdown-content--history{% endif %}">
+            {% if item.dropdown == 'history' %}
+            {% include history-menu.html %}
+            {% else %}
             {% assign now_unix = site.time | date: "%Y%m%d" | plus: 0 %}
             {% assign upcoming = site.tournaments | where_exp: "t", "t.date" %}
             {% assign shown_count = 0 %}
@@ -25,6 +28,7 @@
 
             {% if shown_count == 0 %}
               <span class="dropdown-empty">No upcoming tournaments</span>
+            {% endif %}
             {% endif %}
           </div>
         </div>
@@ -46,7 +50,10 @@
               <a href="{{ item.url | relative_url }}" class="menu-link"><strong>{{ item.name }}</strong></a>
               <button class="mobile-section-toggle" aria-label="Toggle section"><i class="fa-solid fa-chevron-down"></i></button>
             </div>
-            <div class="mobile-dropdown-collapsible">
+            <div class="mobile-dropdown-collapsible{% if item.dropdown == 'history' %} mobile-dropdown-collapsible--history{% endif %}">
+              {% if item.dropdown == 'history' %}
+              {% include history-menu.html item_class="mobile-dropdown-item" %}
+              {% else %}
               {% assign now_unix = site.time | date: "%Y%m%d" | plus: 0 %}
               {% for tournament in site.tournaments %}
                 {% assign t_date = tournament.date | date: "%Y%m%d" | plus: 0 %}
@@ -57,6 +64,7 @@
                   </a>
                 {% endif %}
               {% endfor %}
+              {% endif %}
             </div>
           </div>
         {% else %}

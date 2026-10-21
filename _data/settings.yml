@@ -11,7 +11,7 @@ menu:
   - { name: "Events", url: "events" }
   - { name: "Tournaments", url: "tournaments", dropdown: true }
   - { name: "Venues", url: "venues" }
-  - { name: "History", url: "history" }
+  - { name: "History", url: "history", dropdown: history }
   - { name: "Contact", url: "contact" }
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer

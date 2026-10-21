@@ -1,0 +1,30 @@
+{% comment %}
+  History dropdown: every top-level History entry, grouped by game, newest first.
+  Pass item_class (e.g. "mobile-dropdown-item") for the mobile menu.
+{% endcomment %}
+{% assign history_url = '/history/' | relative_url %}
+{% assign history_entries = site.history | sort: "date" | reverse %}
+{% for game in site.data.history_games %}
+  {% assign game_entries = "" | split: "" %}
+  {% for entry in history_entries %}
+    {% if entry.parent %}{% continue %}{% endif %}
+    {% if entry.title contains game.match %}{% assign game_entries = game_entries | push: entry %}{% endif %}
+  {% endfor %}
+  {% if game_entries.size > 0 %}
+    <span class="dropdown-group-label">{{ game.name }}</span>
+    {% for entry in game_entries %}
+      <a href="{{ history_url }}#{{ entry.title | slugify }}" class="history-menu-item {{ include.item_class }}">
+        {% if entry.menu_label %}
+          <strong>{{ entry.menu_label }}</strong>
+        {% elsif game.campaign %}
+          <strong>{{ entry.title | remove_first: game.name | remove_first: ': ' }}</strong>
+          <span class="dropdown-meta">Since {{ entry.date | date: "%b %Y" }}</span>
+        {% else %}
+          <strong>{{ game.name }} &ndash; {{ entry.date | date: "%b %Y" }}</strong>
+          {% if entry.venue %}<span class="dropdown-meta">{{ entry.venue }}</span>{% endif %}
+        {% endif %}
+      </a>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+<a href="{{ history_url }}" class="all-link {{ include.item_class }}">View all history</a>
