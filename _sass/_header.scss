@@ -376,6 +376,25 @@
       font-style: italic;
       text-align: center;
     }
+    // History dropdown: grouped by game, scrolls if it gets long
+    &.nav-dropdown-content--history {
+      min-width: 270px;
+      max-height: min(70vh, 560px);
+      overflow-y: auto;
+
+      a { padding: 8px 16px; }
+    }
+
+    .dropdown-group-label {
+      display: block;
+      padding: 10px 16px 4px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba($wood-border, 0.65);
+      border-bottom: 1px solid rgba($wood-border, 0.1);
+    }
   }
   
   &:hover .nav-dropdown-content {
@@ -453,6 +472,10 @@
     .mobile-dropdown-collapsible {
       max-height: 800px; 
     }
+    .mobile-dropdown-collapsible--history {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
     .mobile-section-toggle {
       background: rgba($wood-border, 0.2);
       i {
@@ -461,6 +484,16 @@
     }
   }
   
+  .mobile-dropdown-collapsible .dropdown-group-label {
+    display: block;
+    padding: 12px 22px 4px 40px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba($wood-border, 0.65);
+  }
+
   .mobile-dropdown-item {
     padding: 12px 22px !important;
     padding-left: 40px !important;

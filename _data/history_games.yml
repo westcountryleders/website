@@ -1,0 +1,12 @@
+# Groups for the History menu dropdown, in display order.
+# An entry joins a group when its title contains `match`.
+# `campaign: true` shows the entry's own title instead of "Game – Month Year".
+- name: "Twilight Imperium"
+  match: "Twilight Imperium"
+- name: "Root"
+  match: "Root"
+- name: "Arcs"
+  match: "Arcs"
+- name: "D&D"
+  match: "D&D"
+  campaign: true
