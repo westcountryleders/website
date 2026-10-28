@@ -203,3 +203,13 @@
     }
   }
 }
+
+.history-disclaimer {
+  margin: 0 0 20px;
+  padding: 10px 14px;
+  border-left: 3px solid $accent-color;
+  background: rgba($wood-dark, 0.05);
+  font-size: 0.85rem;
+  font-style: italic;
+  color: rgba($wood-dark, 0.8);
+}
